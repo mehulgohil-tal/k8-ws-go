@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-    port := getEnv("PORT", "3000")
+    port := getEnv("PORT", "4000")
     http.HandleFunc("/order/place", controller.PlaceOrder)
 
     http.ListenAndServe(":"+port, nil)

@@ -18,7 +18,13 @@ type OrderService struct {
     inventoryURL string
 }
 
+
 func NewOrderService() *OrderService {
+    inventoryURL := os.Getenv("INVENTORY_URL")
+    if inventoryURL == "" {
+        inventoryURL = "http://localhost:3000"
+    }
+
     return &OrderService{
         coffees: map[string]map[string]int{
             "cappuccino": {
@@ -31,7 +37,7 @@ func NewOrderService() *OrderService {
                 "hotWater":     150,
             },
         },
-        inventoryURL: os.Getenv("INVENTORY_URL"),
+        inventoryURL: inventoryURL,
     }
 }
 

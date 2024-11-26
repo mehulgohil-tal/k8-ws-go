@@ -9,7 +9,7 @@ import (
 func main() {
     http.HandleFunc("/inventory/stock", controller.GetStock)
     http.HandleFunc("/inventory/used", controller.UseIngredient)
-	port := getEnv("PORT", "4000")
+	port := getEnv("PORT", "3000")
 
     http.ListenAndServe(":"+port, nil)
 }
