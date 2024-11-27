@@ -1,6 +1,3 @@
-**K8 Coffee Shop** :
-
----
 
 ## **K8 Coffee Shop Overview**  
 **Goal:**  
@@ -23,17 +20,21 @@ This application simulates the process of ordering coffee. The **Order Service**
    
 
    **Example Request:**
-   ```json
-   GET /order/place?coffeeType=cappuccino&quantity=1
    ```
 
+   GET /order/place?coffeeType=cappuccino&quantity=1
+
+    ```
+
    **Example Response:**
-   ```json
+   
+   ```
    {
     "coffeeType": "cappuccino",
     "quantity": 1,
     "status": "Confirmed"
-  }
+   }
+
    ```
 
 ---
@@ -51,7 +52,9 @@ This application simulates the process of ordering coffee. The **Order Service**
 
 
    **Example Response (GET /inventory/stock):**
-   ```json
+   
+```
+
    {
     "espressoShot": {
       "name": "Espresso Shot",
@@ -70,20 +73,25 @@ This application simulates the process of ordering coffee. The **Order Service**
       "quantity": 500
     }
   }
-   ```
+```
 
    **Example Request (POST /inventory/used):**
+
    ```json
+
    {
      "espressoShot": 1,
      "milk": 200,
      "milkFoam" : 50
    }
+
    ```
 
    **Example Response:**
    ```json
+  
    true/false
+
    ```
 
 ---
@@ -114,9 +122,3 @@ This application simulates the process of ordering coffee. The **Order Service**
 
 ---
 
-
-### **Technology Stack**
-- **Backend:**  
-  - Java (Spring Boot).
-- **API Communication:**  
-  - REST or gRPC for service-to-service communication.
