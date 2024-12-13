@@ -1,0 +1,2 @@
+order: https://hub.docker.com/r/mehulgohiltal/tal-order-service/tags
+inventory: https://hub.docker.com/r/mehulgohiltal/tal-inventory-service/tags
