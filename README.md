@@ -122,3 +122,21 @@ This application simulates the process of ordering coffee. The **Order Service**
 
 ---
 
+### **How to run the services**  
+1. Check go version : go version
+2. Set / Export required variables in environment ( Use env file or set / export variables )
+Positive numerical values can be set for the following environment variables to override default values :
+ESPRESSO_SHOT_QUANTITY
+MILK_QUANTITY
+HOT_WATER_QUANTITY
+MILK_FOAM_QUANTITY
+7. cd inventory-service AND then go run main.go
+8. Inventory service url should be set in INVENTORY_URL environment variable. Default value is http://localhost:8082
+9. In separate terminal : cd order-service AND then go run main.go
+
+
+### **Technology Stack**
+- **Backend:**  
+  - Go
+- **API Communication:**  
+  - REST or gRPC for service-to-service communication.
